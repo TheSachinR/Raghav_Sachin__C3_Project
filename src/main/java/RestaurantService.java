@@ -34,7 +34,14 @@ public class RestaurantService {
 		return restaurants;
 	}
 
-	
+	public Integer calculateTotalOrderCost(List<Item> items) {
+		Integer totalCost = 0;
+		for (Item item : items) {
+			totalCost += item.getPrice();
+		}
+		return totalCost;
+	}
+
 
 
 }

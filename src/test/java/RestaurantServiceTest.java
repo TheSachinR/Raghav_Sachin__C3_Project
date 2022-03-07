@@ -79,6 +79,14 @@ class RestaurantServiceTest {
 		assertEquals(600, 0);
 	}
 
+	@Test
+	public void calculate_total_order_cost_of_list_of_items_which_selects_from_menu_pass_case() {
+		List<Item> items = new ArrayList<Item>();
+		items.add(new Item("Sweet corn soup", 119));
+		items.add(new Item("Vegetable lasagne", 269));
+		assertEquals(388, service.calculateTotalOrderCost(items));
+	}
+
 
 	
 
